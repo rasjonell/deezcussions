@@ -1,9 +1,15 @@
 import { MessageType } from "@src/helpers/enums";
 import { cssPath } from "@src/helpers/selectors";
+import { SelectionEvents } from "@pages/content/events/Selection";
 
 export const EventHandlers = {
   addComment,
+  registerDefaults,
 };
+
+function registerDefaults() {
+  SelectionEvents.init();
+}
 
 function addComment(event: MouseEvent): void {
   const elementNode = event.target as HTMLElement;

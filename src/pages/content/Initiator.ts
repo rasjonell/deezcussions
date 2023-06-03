@@ -1,6 +1,8 @@
+import { EventHandlers } from "@pages/content/EventHandlers";
 import { MessageHandlers } from "@pages/content/MessageHandlers";
 
 MessageHandlers.init();
+EventHandlers.registerDefaults();
 
 const items = new Array(localStorage.length)
   .fill(null)
